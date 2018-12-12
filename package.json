@@ -1,0 +1,19 @@
+{
+  "name": "my-react-app",
+  "version": "1.0.0",
+  "description": "My react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbobis/my-react-app.git"
+  },
+  "author": "Benedict Bobis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbobis/my-react-app/issues"
+  },
+  "homepage": "https://github.com/bbobis/my-react-app#readme"
+}
