@@ -4,7 +4,9 @@
   "description": "My react application",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/bbobis/my-react-app/issues"
   },
-  "homepage": "https://github.com/bbobis/my-react-app#readme"
+  "homepage": "https://github.com/bbobis/my-react-app#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
 }
