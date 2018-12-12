@@ -28,3 +28,28 @@
    }
  };
  ````
+ 5. Install eslint and Prettier
+ * `npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier`
+ 6. Install Airbnb style guide
+ * `npx install-peerdeps --dev eslint-config-airbnb`
+ 7. Configure eslint to use airbnb style guide as well as prettier by creating a `.eslintrc` file
+ ````javascript
+ {
+   "extends": ["airbnb", "prettier"],
+   "plugins": ["prettier"],
+   "rules": {
+     "prettier/prettier": ["error"]
+   }
+ }
+ ````
+ 8. To configure prettier, a `.prettierrc` should be created. In this project i'm using the following configuration for prettier:
+ * Always include trailing commas
+ * Always use single quotes
+ * Setting a print width of 100 characters
+ ````javascript
+ {
+   "singleQuote": true,
+   "trailingComma": "all",
+   "printWidth": 100
+ }
+ ````
