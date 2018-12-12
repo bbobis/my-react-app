@@ -1,5 +1,5 @@
 # My First React App
-###Setting up a React project from scratch:
+### Setting up a Hello World React project from scratch:
 1. install webpack and webpack cli 
 * `npm i -D webpack webpack-cli`
 2. Install babel, preset-env and loader for webpack. Babel is used to transpile ES6 and above code down to ES5 so the code works for older browsers
@@ -53,3 +53,46 @@
    "printWidth": 100
  }
  ````
+ 9. Install react, react-dom and the react babel preset
+ * `npm i react react-dom`
+ * `npm i -D @babel/preset-react`
+ 10. Add the react babel preset to the `.babelrc` file
+ ````javascript
+ {
+   "presets": ["@babel/preset-env", "@babel/preset-react"]
+ }
+ ````
+ 11. Install the html webpack plugin as this is a react app
+ * `npm i -D html-webpack-plugin`
+ 12. Add the html webpack plugin to your webpack config file
+ ````javascript
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
+ const htmlWebpackPlugin = new HtmlWebpackPlugin({
+   template: "./src/index.html",
+   filename: "index.html"
+ });
+ 
+ module.exports = {
+   module: {
+     rules: [
+       {
+         test: /\.js$/,
+         exclude: /node_modules/,
+         use: [
+           "babel-loader"
+         ]
+       }
+     ]
+   },
+   plugins: [htmlWebpackPlugin]
+ };
+ ````
+ 13. Install webpack dev server so we can start our react app
+ * `npm i -D webpack-dev-server`
+ 14. Modify the `package.json` file to use the webpack dev server
+ ````json
+"scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  }
+ ```` 

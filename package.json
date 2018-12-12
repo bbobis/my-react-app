@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack --mode development",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -18,7 +18,11 @@
     "url": "https://github.com/bbobis/my-react-app/issues"
   },
   "homepage": "https://github.com/bbobis/my-react-app#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
@@ -30,6 +34,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.0",
+    "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.15.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
