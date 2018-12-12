@@ -68,7 +68,7 @@
  ````javascript
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const htmlWebpackPlugin = new HtmlWebpackPlugin({
-   template: "./src/index.html",
+   template: "./public/index.html",
    filename: "index.html"
  });
  
